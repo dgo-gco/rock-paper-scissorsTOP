@@ -7,12 +7,58 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+
+    <div id="info"><input type="text" name="" id="addchoice"><button>Submit</button></div>
+
     <script>
         const games = ["Rock", "Paper", "Scissors"]
 
         function getComputerChoice() {
             return games[Math.floor(Math.random() * games.length)];
         }
+
+        var computerPoints = 0;
+        var yourPoints = 0; 
+        var tie = 0;
+
+
+        function playRound(playerSelection, computerSelection) {
+            const playerSelection = document.querySelector('addchoice');
+            const computerSelection = getComputerChoice();
+
+            if ((computerSelection === "Paper" && playerSelection === "Rock") ||
+                (computerSelection === "Scissors" && playerSelection === "Paper") ||
+                (computerSelection === "Rock" && playerSelection === "Scissors") && 
+                (computerPoints <= 5 || yourPoints <= 5)) {
+                 computerPoints++;
+                return "Computer wins";
+            } else if ((computerSelection === "Rock" && playerSelection === "Paper") ||
+                      (computerSelection === "Paper" && playerSelection === "Scissors") ||
+                      (computerSelection === "Scissors" && playerSelection === "Rock") &&
+                      (yourPoints <= 5 && computerPoints <= 5)) {
+                   yourPoints++;
+                   return "You win";
+            } else if ((computerSelection === playerSelection) &&
+                       (yourPoints <= 5 && computerPoints <= 5)) {
+                   tie++;
+                   return "It is a tie!";
+            } else {
+                return "not valid";
+            }
+        }
+
+   
+        playRound(playerSelection, computerSelection);
+
+
+
+
+
+
+        //Play 5 rounds game
+        //Keep score
+        //Report Winner and loser at the end
+
 
     </script>
 </body>
