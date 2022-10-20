@@ -1,0 +1,64 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: beige;
+}
+
+.text-results {
+    display: flex;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.choices > button {
+    background: none;
+    border: none;
+    font-size: 64px;
+}
+
+.choices > button:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+}
+
+.btn-try {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#playagain-btn {
+    background-color: rgba(220, 120, 78, 0.822);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+#playagain-btn:hover {
+    cursor: pointer;
+    opacity: 70%;
+}

@@ -64,14 +64,14 @@ function playRound(playerSelection, computerSelection) {
             } else if ((computerSelection === playerSelection) &&
                        (yourPoints <= 5 && computerPoints <= 5)) {
                          tie++;
-                         textResult.textContent = "it's a tie";
+                         textResult.textContent = "It's a tie";
                          tiesScoreElement.textContent = `${tie}`;
             } else {
                 return "not valid";
             }
 
             if (computerPoints === 5) {
-                textResult.textContent = "YOU'VE BEEN BEATED BY A COMPUTER";
+                textResult.textContent = "YOU'VE BEEN BEATEN BY A COMPUTER";
              } else if (yourPoints === 5) {
                 textResult.textContent ="YOU ARE THE CHAMPIONS!";
            } else if (tie === 5) {
@@ -81,16 +81,6 @@ function playRound(playerSelection, computerSelection) {
             playAgainButton.style.display = "block";
         }
         }
-
-    //      if (computerPoints === 5) {
-    //         textResult.textContent = "YOU'VE BEEN BEATED BY A COMPUTER";
-    //      } else if (yourPoints === 5) {
-    //         textResult.textContent ="YOU ARE THE CHAMPIONS!";
-    //    } textResult.textContent ="IT'S A TIE!!";
-    
-
-   
-
 
         //Play 5 rounds game
         //Keep score
