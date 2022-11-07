@@ -75,7 +75,7 @@ function playRound(playerSelection, computerSelection) {
              } else if (yourPoints === 5) {
                 textResult.textContent ="YOU ARE THE CHAMPIONS!";
            } else if (tie === 5) {
-               textResult.textContent ="IT'S A TIE!!";
+               textResult.textContent ="IT'S A TIE!";
         } 
         if (yourPoints === 5 || computerPoints === 5 || tie === 5) {
             playAgainButton.style.display = "block";
